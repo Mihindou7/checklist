@@ -1,5 +1,4 @@
-import Form from "./component/form/FormCheclist.jsx";
-import DashboardButton from "./component/DashBoard/Button.jsx";
+import Form from "./component/DashBoard/NewChecklist.jsx";
 import TaskList from "./component/DashBoard/List.jsx";
 import { useEffect, useState, useRef } from "react";
 export default function MainPage(){
@@ -13,6 +12,13 @@ export default function MainPage(){
             .catch((error)=>console.error(error))
         },[]
     )
+        //suivre l'évolution
+        const progress = (id,totalId)=>{
+            if(id !==totalId){
+                return "progress"
+            }
+            return "Done"
+        }
         //supprimer une task
         const deleteTask = (id)=>{
             const newtable = liste.filter(a=> a.id !=id)
@@ -55,11 +61,13 @@ export default function MainPage(){
                     liste.map((li,index)=>(
                         <TaskList
                         key={index}
+                        id={li.id}
                         nom={li.title}
                         description={li.description}
-                        situation={li.data}
+                        situation={progress(li.chechlist.filter((inputChecked)=>inputChecked.etat).length,li.chechlist.length)}
                         staindone={li.chechlist.filter((inputChecked)=>inputChecked.etat).length}
                         totaltodo={li.chechlist.length}
+                        deleted={()=>deleteTask(li.id)}
                         ></TaskList>
                     ))
                 ) :(<p>Chargement</p>)

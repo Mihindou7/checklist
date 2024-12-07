@@ -7,7 +7,7 @@ export default function EditForm(props){
                 <form action="" onSubmit={props.envoyer}>
                      <span onClick={props.close}>&times;</span>
                     <div className="a">
-                        <label htmlFor="">Nom :</label>
+                        <label htmlFor="">Title:</label>
                         <input type="text" name="" ref={props.nomRef} placeholder="Nom" required/>
                     </div>
 

@@ -1,4 +1,4 @@
-export default function TaskList(props){
+export default function Task(props){
     return(
         <>
             <li>

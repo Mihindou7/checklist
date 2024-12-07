@@ -7,7 +7,7 @@ export default function TaskList(props){
                  <p>{props.description}</p>
              </div>
              <div>
-                  <DashboardButton nom="Edit" redirection={`/list?id=${props.id }`}/>
+                  <DashboardButton nom="Edit" redirection={`/details?id=${props.id }`}/>
                   <p>{props.situation}</p>
                   <button onClick={props.deleted}>Delete</button>
                   <p>{props.staindone}/{props.totaltodo}</p>

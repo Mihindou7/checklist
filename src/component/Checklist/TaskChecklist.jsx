@@ -1,5 +1,5 @@
-import TaskList from "./TaskList"
-export default function Task(props){
+import Task from "./TasList"
+export default function TaskTotal(props){
     return(
         <>
             <div className="task">
@@ -7,13 +7,13 @@ export default function Task(props){
             <input type="text" defaultValue={props.description} />                
             <div className="details">
                     <div className="situation">
-                        <p>{props.countChecked}/{props.countChecke}</p>
+                        <p></p>
                     </div>
                     <hr />
                     <ul>
                         
                             {props.checklist.map((list,indexCheck)=>(
-                                <TaskList key={indexCheck} value={list.value} etat={list.etat} checkout={()=>props.checkout(indexCheck)}></TaskList>
+                                <Task key={indexCheck} value={list.value} etat={list.etat} checkout={()=>props.checkout(indexCheck)}></Task>
            
                             ))}
                     </ul>
