@@ -1,10 +1,11 @@
 import React from "react"
-import DashBoard from "./dashBoard.jsx"
+import MainPage from "./Board";
+
 
 function App() {
 
   return (
-    <DashBoard />
+      <MainPage/>
   )
 }
 
