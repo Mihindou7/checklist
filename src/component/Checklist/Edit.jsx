@@ -2,8 +2,10 @@ export default function EditForm(props){
 
     return(
         <div className="formulaire" style={props.etat}>
+           
 
             <div className="parent">
+                <h3>Create a new task</h3>
                 <form action="" onSubmit={props.envoyer}>
                      <span onClick={props.close}>&times;</span>
                     <div className="a">

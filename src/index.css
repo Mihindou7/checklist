@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body{
+  background-color: #26547C;
+}
 
 a {
   font-weight: 500;
@@ -20,15 +23,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
- 
 }
 
 h1 {
@@ -72,5 +66,40 @@ button:focus-visible {
 Page Board
 */
 h1{
-  color: #26547C ;
+  color:#FFD166 ;
+  text-align: center;
+
+}
+h2{
+  color: black;
+}
+p{
+  color: black;
+  font-size: 16px;
+}
+button{
+  background-color: #FFD166  ;
+  text-align: center;
+  margin: 80px 0px 0px;
+  color: black;
+}
+.buttonnew{
+   display: flex;
+   align-items: center;
+
+}
+.list{
+  background-color: #f9f9f9;
+  margin: 80px  300px 0px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+form{
+  justify-content: center;
+  border-radius: 10px;
+  background-color:  #26547C;
+  margin: 80px  300px 0px;
+  color:  #FFD166;
+
 }

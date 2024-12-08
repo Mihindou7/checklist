@@ -1,3 +1,4 @@
+
 import TaskTotal from "./component/Checklist/TaskChecklist.jsx";
 import EditForm from "./component/Checklist/Edit.jsx";
 import { useState, useEffect, useRef } from "react";
@@ -70,6 +71,9 @@ export default function Affiche(){
     
     return(
         <>
+         <div>
+                <h1>CheckList</h1>
+             </div>
             {myCheckList.length > 0 ? (
 
                 myCheckList.map(((list,index)=>(

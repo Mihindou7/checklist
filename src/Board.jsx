@@ -53,8 +53,20 @@ export default function MainPage(){
         } 
     return(
         <>
+            <div className="head">
             <h1>My checkList</h1>
             <button onClick={affiche}>New Checklist</button>
+            </div>
+            <Form
+            etat = {etat}
+            nomRef={nomRef}
+            descRef={descRef} 
+            envoyer={Submitformulaire} 
+            close={close} 
+
+            
+            />
+         
             {
                 liste.length > 0 ?(
 
@@ -73,15 +85,7 @@ export default function MainPage(){
                 ) :(<p>Chargement</p>)
                 
             }
-            <Form
-            etat = {etat}
-            nomRef={nomRef}
-            descRef={descRef} 
-            envoyer={Submitformulaire} 
-            close={close} 
-
-            
-            />
+         
  
         </>
     )
